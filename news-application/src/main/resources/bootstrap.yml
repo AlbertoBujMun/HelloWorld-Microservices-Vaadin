@@ -1,0 +1,16 @@
+server.port: 8080
+
+spring:
+  application.name: news-application
+  cloud.config:
+    discovery:
+      enabled: true
+      serviceId: config-server
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka/
+    registryFetchIntervalSeconds: 1
+  instance:
+    leaseRenewalIntervalInSeconds: 1
