@@ -7,9 +7,7 @@ import com.vaadin.ui.UI;
 import org.springframework.hateoas.Resources;
 import org.vaadin.addon.twitter.Timeline;
 
-/**
- * @author Alejandro Duarte.
- */
+
 @SpringUI(path = "/")
 public class VaadinUI extends UI {
 

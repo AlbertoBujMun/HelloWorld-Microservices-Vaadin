@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import java.util.Arrays;
 
 /**
- * @author Alejandro Duarte.
+ 
  */
 @Service
 public class CompanyServiceFallback implements CompanyService {

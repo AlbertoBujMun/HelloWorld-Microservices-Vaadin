@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
- * @author Alejandro Duarte.
+ 
  */
 @Component
 public class FallbackProvider implements ZuulFallbackProvider {

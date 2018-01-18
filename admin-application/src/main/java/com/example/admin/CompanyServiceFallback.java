@@ -4,7 +4,7 @@ import org.springframework.hateoas.Resources;
 import org.springframework.stereotype.Service;
 
 /**
- * @author Alejandro Duarte.
+ 
  */
 @Service
 public class CompanyServiceFallback implements CompanyService {

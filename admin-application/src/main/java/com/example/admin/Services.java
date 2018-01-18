@@ -8,7 +8,7 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
 import javax.servlet.ServletContext;
 
 /**
- * @author Alejandro Duarte.
+ 
  */
 @Service
 public class Services {

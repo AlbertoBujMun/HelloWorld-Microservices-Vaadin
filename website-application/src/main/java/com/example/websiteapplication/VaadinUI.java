@@ -1,15 +1,18 @@
 package com.example.websiteapplication;
 
+import org.springframework.beans.factory.annotation.Value;
+
 import com.vaadin.server.ExternalResource;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.spring.annotation.SpringUI;
 import com.vaadin.ui.BrowserFrame;
 import com.vaadin.ui.HorizontalSplitPanel;
 import com.vaadin.ui.UI;
-import org.springframework.beans.factory.annotation.Value;
+import com.vaadin.ui.VerticalLayout;
+import com.vaadin.ui.VerticalSplitPanel;
 
 /**
- * @author Alejandro Duarte.
+ 
  */
 @SpringUI(path = "/")
 public class VaadinUI extends UI {
@@ -19,6 +22,9 @@ public class VaadinUI extends UI {
 
     @Value("${admin-application.url}")
     private String adminUrl;
+    
+    @Value("${holamundo-application.url}")
+    private String holamundoUrl;
 
     @Value("${ui.split.position:30}")
     private int uiSplitPosition;
@@ -33,8 +39,14 @@ public class VaadinUI extends UI {
 
         BrowserFrame admin = new BrowserFrame("Admin", new ExternalResource(adminUrl));
         admin.setSizeFull();
+        
+        BrowserFrame holaMundo = new BrowserFrame("HolaMundo", new ExternalResource(holamundoUrl));
+        holaMundo.setSizeFull();
+        
+        VerticalSplitPanel extraLayout = new VerticalSplitPanel(admin, holaMundo);
+        extraLayout.setSplitPosition(uiSplitPosition);
 
-        HorizontalSplitPanel mainLayout = new HorizontalSplitPanel(admin, news);
+        HorizontalSplitPanel mainLayout = new HorizontalSplitPanel(extraLayout, news);
         mainLayout.setSplitPosition(uiSplitPosition);
         mainLayout.setSizeFull();
 

@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * @author Alejandro Duarte.
+ 
  */
 public class StickySessionRule extends ZoneAvoidanceRule {
 

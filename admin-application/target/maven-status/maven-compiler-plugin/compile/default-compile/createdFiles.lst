@@ -1,0 +1,6 @@
+com\example\admin\VaadinUI.class
+com\example\admin\AdminApplication.class
+com\example\admin\Services.class
+com\example\admin\Company.class
+com\example\admin\CompanyService.class
+com\example\admin\CompanyServiceFallback.class
